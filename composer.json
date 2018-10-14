@@ -1,11 +1,20 @@
+::::::::::::::
+composer.json
+::::::::::::::
 {
     "name": "drupal/drupal",
-    "description": "Drupal is an open source content management platform powering millions of websites and applications.",
+    "description": "Drupal is an open source content management platform powering millions of websites and applicat
+ions.",
     "type": "project",
     "license": "GPL-2.0-or-later",
     "require": {
         "composer/installers": "^1.0.24",
-        "wikimedia/composer-merge-plugin": "^1.4"
+        "wikimedia/composer-merge-plugin": "^1.4",
+        "drupal/google_nl_autotag": "^1.0",
+        "google/cloud": "^0.82.0",
+        "drupal/google_nl_api": "^1.2",
+        "google/cloud-language": "^0.16.1",
+        "google/cloud-datastore": "^1.5"
     },
     "replace": {
         "drupal/core": "^8.6"
@@ -54,8 +63,10 @@
         "post-package-update": "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup",
         "drupal-phpunit-upgrade-check": "Drupal\\Core\\Composer\\Composer::upgradePHPUnit",
         "drupal-phpunit-upgrade": "@composer update phpunit/phpunit --with-dependencies --no-progress",
-        "phpcs": "phpcs --standard=core/phpcs.xml.dist --runtime-set installed_paths $($COMPOSER_BINARY config vendor-dir)/drupal/coder/coder_sniffer --",
-        "phpcbf": "phpcbf --standard=core/phpcs.xml.dist --runtime-set installed_paths $($COMPOSER_BINARY config vendor-dir)/drupal/coder/coder_sniffer --"
+        "phpcs": "phpcs --standard=core/phpcs.xml.dist --runtime-set installed_paths $($COMPOSER_BINARY config vend
+or-dir)/drupal/coder/coder_sniffer --",
+        "phpcbf": "phpcbf --standard=core/phpcs.xml.dist --runtime-set installed_paths $($COMPOSER_BINARY config ve
+ndor-dir)/drupal/coder/coder_sniffer --"
     },
     "repositories": [
         {
