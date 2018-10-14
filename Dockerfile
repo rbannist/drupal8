@@ -1,3 +1,5 @@
-FROM eu.gcr.io/drupalgaef/drupal8:v1.0.1
+FROM gcr.io/google-appengine/php
 
-EXPOSE 80
+COPY . /var/www/html
+
+RUN composer install

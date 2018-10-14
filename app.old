@@ -1,0 +1,13 @@
+runtime: php
+env: flex
+
+env_variables:
+    GOOGLE_STORAGE_BUCKET: gglewdevdrgaestrg01
+    CLOUDSQL_CONNECTION_NAME: drupalgaef:europe-west1:gglewdevdrgaefsql01
+    CLOUDSQL_USER: root
+    CLOUDSQL_PASSWORD: U3zaSep6
+    CLOUDSQL_DATABASE_NAME: drupal
+
+handlers:
+- url: /.*
+  script: this field is required, but ignored
